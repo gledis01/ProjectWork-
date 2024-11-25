@@ -18,7 +18,7 @@ INSERT INTO Users (name, email, password) VALUES
 
 --2. Inserting Test Data for Moods Table:
 -- Test Data 1: User 1 logs various moods
-INSERT INTO Moods (user_id, mood, note, date)
+INSERT INTO MoodEntries (user_id, mood, note, date)
 VALUES
 (1, 'happy', 'Had a great start to the week!', '2024-11-01 08:00:00'),
 (1, 'stressed', 'A lot of work at the office today.', '2024-11-02 10:30:00'),
@@ -28,7 +28,7 @@ VALUES
 
 
 -- Test Data 2: User 2 logs different moods with varied notes
-INSERT INTO Moods (user_id, mood, note, date)
+INSERT INTO MoodEntries (user_id, mood, note, date)
 VALUES
 (2, 'happy', 'Received good news from a friend.', '2024-11-01 09:00:00'),
 (2, 'sad', 'Feeling lonely after a busy week.', '2024-11-02 19:00:00'),
@@ -38,7 +38,7 @@ VALUES
 
 
 -- Test Data 3: User 3 logs only 'happy' and 'content' moods
-INSERT INTO Moods (user_id, mood, note, date)
+INSERT INTO MoodEntries (user_id, mood, note, date)
 VALUES
 (3, 'happy', 'Spent the day hiking in the mountains.', '2024-11-01 07:00:00'),
 (3, 'content', 'Enjoyed a nice meal with family.', '2024-11-02 12:00:00'),
@@ -48,7 +48,7 @@ VALUES
 
 
 -- Test Data 4: User 4 logs a variety of moods, some with no notes
-INSERT INTO Moods (user_id, mood, note, date)
+INSERT INTO MoodEntries (user_id, mood, note, date)
 VALUES
 (4, 'stressed', 'Feeling overwhelmed with work and deadlines.', '2024-11-01 08:30:00'),
 (4, 'angry', NULL, '2024-11-02 14:00:00'),
@@ -58,7 +58,7 @@ VALUES
 
 
 -- Test Data 5: User 5 logs moods without notes
-INSERT INTO Moods (user_id, mood, note, date)
+INSERT INTO MoodEntries (user_id, mood, note, date)
 VALUES
 (5, 'happy', NULL, '2024-11-01 08:00:00'),
 (5, 'angry', NULL, '2024-11-02 13:30:00'),

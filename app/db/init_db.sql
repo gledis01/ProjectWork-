@@ -12,8 +12,8 @@ CREATE TABLE Users (
 
 
 -- 2. Moods Table (stores individual mood entries for each user)
-DROP TABLE IF EXISTS Moods;
-CREATE TABLE Moods (
+DROP TABLE IF EXISTS MoodEntries;
+CREATE TABLE MoodEntries (
     mood_id INTEGER PRIMARY KEY AUTOINCREMENT,  -- Primary key, auto-increment
     user_id INTEGER NOT NULL,                   -- Foreign key to the Users table
     mood TEXT CHECK(mood IN ('happy', 'sad', 'stressed', 'angry', 'content')) NOT NULL,  -- Mood type, must be one of the specified values
@@ -46,3 +46,62 @@ CREATE TABLE Monthly_Summary (
     summary_text TEXT,                             -- Optional text for additional summary notes
     FOREIGN KEY (user_id) REFERENCES Users(user_id)  -- Foreign key constraint
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
