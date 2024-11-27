@@ -5,20 +5,30 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 
 // Importing the necessary Material functions for light and dark color schemes
-import androidx.compose.material.lightColors
-import androidx.compose.material.darkColors
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.unit.dp
 
 // Define the light and dark color schemes
-private val LightColors = lightColors(
+private val LightColors = lightColorScheme(
     primary = PrimaryColor,         // Primary color
-    primaryVariant = PrimaryVariant, // Darker shade of primary color
+    onPrimary = PrimaryVariant, // Darker shade of primary color
     secondary = SecondaryColor      // Secondary color
 )
 
-private val DarkColors = darkColors(
+private val DarkColors = darkColorScheme(
     primary = PrimaryColor,         // Primary color for dark theme
-    primaryVariant = PrimaryVariant, // Darker shade of primary for dark theme
+    onPrimary = PrimaryVariant, // Darker shade of primary for dark theme
     secondary = SecondaryColor      // Secondary color for dark theme
+)
+// Define custom shapes
+val CustomShapes = Shapes(
+    small = RoundedCornerShape(4.dp),   // Small components (e.g., Chips)
+    medium = RoundedCornerShape(8.dp), // Medium components (e.g., Cards)
+    large = RoundedCornerShape(16.dp)  // Large components (e.g., Dialogs)
 )
 
 @Composable
@@ -31,9 +41,9 @@ fun MoodTrackerTheme(
 
     // Wrap the content with MaterialTheme which applies the theme globally
     MaterialTheme(
-        colors = colors,  // Apply the selected color scheme
+        colorScheme = colors,  // Apply the selected color scheme
         typography = Typography,  // Use the Typography defined elsewhere
-        shapes = Shapes,  // Use the Shapes defined elsewhere
+        shapes = CustomShapes,  // Use the Shapes defined elsewhere
         content = content  // This is the composable content to which the theme will be applied
     )
 }

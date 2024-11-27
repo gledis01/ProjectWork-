@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
             MoodTrackerTheme {
                 // Initialize repositories and service
                 val moodRepository = MoodRepository()
-                val moodEntryRepository = MoodEntryRepository
+                val moodEntryRepository = MoodEntryRepository()
             }
         }
     }
