@@ -1,5 +1,5 @@
 --ACTUAL QUERIES FOR APP'S FUNCTIONALITIES
-/*
+
 --1. CREATE AN ACCOUNT
 --// inserts a new user into Users table
 INSERT INTO Users (name, email, password)
@@ -64,7 +64,7 @@ SELECT average_mood
 FROM Monthly_Summary
 WHERE user_id = 1 AND month = '2024-11';
 
-*/
+
 
 
 

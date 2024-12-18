@@ -1,10 +1,159 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".ui.IntroActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Upper Background -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="328dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upper_background" />
+
+        <!-- User Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="120dp"
+            android:gravity="center">
+
+            <!-- Circular Profile Image -->
+            <ImageView
+                android:id="@+id/userProfilePicture"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/user_photo"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome, User"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center" />
+
+
+        </LinearLayout>
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="328dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Today's Date -->
+            <TextView
+                android:id="@+id/currentDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:text="Date" />
+
+            <!-- Mood Tracker Title -->
+            <TextView
+                android:id="@+id/moodTrackerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="Mood Tracker"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gray_box_background"
+
+                android:layout_marginTop="16dp">
+
+                <RadioGroup
+                    android:id="@+id/moodRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <RadioButton
+                        android:id="@+id/moodHappy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Happy" />
+
+                    <RadioButton
+                        android:id="@+id/moodSad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sad" />
+
+                    <RadioButton
+                        android:id="@+id/moodStressed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stressed" />
+
+                    <RadioButton
+                        android:id="@+id/moodAngry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Angry" />
+
+                    <RadioButton
+                        android:id="@+id/moodCalm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calm" />
+
+                    <LinearLayout
+                        android:layout_width="349dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/gray_box_background"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/moodNoteInput"
+                            android:layout_width="221dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:hint="Add a note (optional)"
+                            android:padding="8dp"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3"
+                            android:scrollbars="vertical" />
+
+
+                        <Button
+                            android:id="@+id/submitMoodButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Submit" />
+                    </LinearLayout>
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

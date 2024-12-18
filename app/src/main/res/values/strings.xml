@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">PW1</string>
     <string name="start">Start</string>
-    <string name="intro_title1">Start tracking your mood \n with MOODTRACKER</string>
-    <string name="intro_des1">Lorem ipsum odor amet, \n consectetuer adipiscing elit.</string>
+    <string name="intro_title1">Start tracking your mood \n with MooDiary</string>
+    <string name="intro_des1">Your path to a healthy MIND!</string>
 
     <string name="intro_title2">Welcome Back!\n Let’s help you tract your mood.</string>
 
